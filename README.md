@@ -65,4 +65,29 @@ To evaluate where revenue is growing versus where it stalls, a column chart was 
 With an overall churn rate sitting at **39.03%**, how should the business respond to these findings?
 
 * **Retain Annual Options:** Even though annual subscriptions yield minimal upfront volume, they shouldn't be completely eliminated. Instead, they provide a stable baseline for long-term customer lock-in and should be optimized rather than removed.
-* **Focus on Expansion:** Because cohort retention and activity expand over time (visible in the 34-month cohort matrix), marketing efforts should focus on driving mid-tenure engagement to push users from Basic tiers into Pro and Premium plans.
+
+## 4. Cohort Modeling & Future Trajectory
+The initial approach to forecasting future customer behavior involved designing a discrete dynamical system using **Markov chains**—a probability-based matrix method used to predict likely future states and identify ways to optimize current retention.
+
+Building this matrix required creating custom calculated columns and DAX measures to map customer cohorts (`Cohort_Month`) against tenure duration (`0` to `34` months). Because newer cohorts have not existed long enough to reach later tenure milestones, the resulting matrix naturally forms a lower-left staircase pattern (leaving an empty upper-right triangle):
+
+<p align="center">
+  <img width="1147" height="313" alt="Cohort Retention Matrix" src="https://github.com/user-attachments/assets/28e2acbc-d47c-4f9f-885d-3619089e26a4" />
+</p>
+
+### Key Takeaways & Recommendations
+Rather than showing typical subscription decay, the matrix reveals that customer activity consistently **expands** as tenure increases, peaking around **Months 20 to 24**. With a few targeted adjustments, overall profitability can be maximized:
+
+* **Focus on Expansion:** Because cohort activity grows steadily over time, marketing and product efforts should prioritize mid-tenure engagement to upgrade users from **Basic** tiers into higher-yielding **Pro** and **Premium** plans.
+* **Optimize Annual Plans:** While annual subscriptions represent only **3.53%** of total MRR, offering targeted renewal incentives or tier discounts can help lock in long-term users and offset the **39.03%** churn rate.
+* **Target Early-Tenure Drop-offs:** Monitoring cohort behavior during the first 6 months ensures new sign-ups reach the high-engagement maturity window seen in older cohorts.
+
+---
+
+## Conclusion
+By combining relational data modeling in SQL Server Management Studio with interactive cohort analysis in Power BI, this project transforms raw subscription logs into actionable business intelligence. The findings demonstrate that while overall revenue is growing steadily, long-term profitability depends on nurturing mid-tenure customer expansion and reducing early subscription churn.
+
+## Dataset used 
+
+Ansari, M. (2026, March 7). Synthetic SaaS subscription dataset. Kaggledatasets. https://www.kaggle.com/datasets/ansarimuzammil/synthetic-saas-subscription-dataset
+
