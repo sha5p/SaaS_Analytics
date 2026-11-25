@@ -2,7 +2,7 @@
 
 ## Repository Navigation
 * **Data:** Access the raw dataset files used for this project.
-* **Queries:** Browse the SQL queries and scripts used for data cleaning and transformation (note that core logic and measures are also embedded directly within the Power BI file).
+* **Queries:** Browse some saved SQL queries and scripts used for data cleaning and transformation (note that core logic and measures are also embedded directly within the Power BI file).
 * **Power BI Dashboard:** Download the `.pbix` file to explore the fully interactive data model, measures, and cohort retention matrix.
 
 
