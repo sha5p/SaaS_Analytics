@@ -1,5 +1,11 @@
 # SaaS Revenue & Cohort Retention Dashboard
 
+## Repository Navigation
+* **Data:** Access the raw dataset files used for this project.
+* **Queries:** Browse the SQL queries and scripts used for data cleaning and transformation (note that core logic and measures are also embedded directly within the Power BI file).
+* **Power BI Dashboard:** Download the `.pbix` file to explore the fully interactive data model, measures, and cohort retention matrix.
+
+
 ## Overview 
 An end-to-end data analytics and business intelligence project that transforms raw subscription data into an interactive executive dashboard. This project investigates historical performance, customer behavior patterns, and future revenue trajectories using a structured data pipeline.
 
